@@ -2,9 +2,9 @@ extends layout
 
 block content
     h1 Bienvenue sur le tchat
-    form(action="")
+    form(action="", id="form-connection")
         label(for="name") Nom d'utilisiteur
-        input#(type="text", name="name", id="name")
+        input(type="text", name="name", id="name")
 
         input(type="submit", value="Se connecter au tchat")
 
