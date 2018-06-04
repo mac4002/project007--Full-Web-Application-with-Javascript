@@ -2,11 +2,36 @@ extends layout
 
 block content
     h1 Bienvenue sur le tchat
-    form(action="", id="form-connection")
-        label(for="name") Nom d'utilisiteur
-        input(type="text", name="name", id="name")
+    section#loginArea(style="display:block;")
+        
+        h5 Login to tchat
+        form(action="", id="form-connection")
+            .form-group
+                label(for="name") Nom d'utilisiteur
 
-        input(type="submit", value="Se connecter au tchat")
+            .form-control
+                input(type="text", name="name", id="name")
+            br
+
+            button.btn.btn-lg.btn-primary(type='submit') Se connecter au tchat
+
+    section#messageArea(style="display:none;")
+        h5 Messages
+        
+        div#tchatArea
+        
+        form(action="", id="form-message")
+            .form-group
+                label(for="message") Message
+            
+            .form-control
+                input(type="text", name="message", id="message")
+            br
+
+            button.btn.btn-lg.btn-primary(type='submit', id="btnmessage") Se connecter au tchat
+
+            
+            br
 
 block js
     script(src="/dist/socket.io.js")
